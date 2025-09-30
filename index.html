@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Sousa Rocha</title>
+    <meta name="description" content="Fotógrafo e videomaker em Chapada dos Guimarães. Especializado em retratos, eventos e ensaios autênticos. Transformo momentos em memórias inesquecíveis.">
+    <link rel="shortcut icon" href="images/IMG_8036.PNG" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -27,7 +29,10 @@
             <div class="header-right">
                 <label class="theme-switch" for="theme-toggle-checkbox" title="Alterar tema">
                     <input type="checkbox" id="theme-toggle-checkbox">
-                    <span class="slider round"></span>
+                    <span class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </span>
                 </label>
                 <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
                     <div class="hamburger"></div>
@@ -47,19 +52,19 @@
     <main>
         <section id="inicio" class="hero-section">
             <div class="container hero-container">
-                <div class="hero-text" data-aos="fade-right">
-                    <p class="intro-text">Olá, eu sou</p>
-                    <h1>Gustavo Sousa Rocha</h1>
-                    <p class="role">Fotógrafo & Videomaker</p>
-                    <div class="social-icons">
+                <div class="hero-text">
+                    <p class="intro-text" data-aos="fade-up">Olá, eu sou</p>
+                    <h1 data-aos="fade-up" data-aos-delay="200">Gustavo Sousa Rocha</h1>
+                    <p class="role" data-aos="fade-up" data-aos-delay="400">Fotógrafo & Videomaker</p>
+                    <div class="social-icons" data-aos="fade-up" data-aos-delay="600">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-                    <img src="images/FortalezaPhoto2.jpg" alt="Foto de Gustavo Sousa Rocha">
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="800">
+                    <img src="images/FortalezaPhoto2.jpg" alt="Foto de Gustavo Sousa Rocha" loading="lazy">
                 </div>
             </div>
         </section>
@@ -74,7 +79,7 @@
                 </div>
                 <div class="about-image" data-aos="fade-left" data-aos-delay="200">
                     <div class="image-accent"></div>
-                    <img src="images/FotoProfissaGustavo.jpg" alt="Retrato de Gustavo Sousa Rocha">
+                    <img src="images/FotoProfissaGustavo.jpg" alt="Retrato de Gustavo Sousa Rocha" loading="lazy">
                 </div>
             </div>
         </section>
@@ -82,26 +87,26 @@
         <section id="servicos" class="services-section section-padded">
             <div class="container services-container">
                 <div class="services-image" data-aos="fade-right">
-                    <img src="images/herocontent.jpg" alt="Fotógrafo em ação">
+                    <img src="images/herocontent.jpg" alt="Fotógrafo em ação" loading="lazy">
                 </div>
-                <div class="services-list" data-aos="fade-left" data-aos-delay="200">
+                <div class="services-list" data-aos="fade-left">
                     <p class="section-tag">Serviços</p>
                     <h3>O que eu posso fazer?</h3>
-                    <div class="service-item">
+                    <div class="service-item" data-aos="fade-left" data-aos-delay="200">
                         <i class="fas fa-camera"></i>
                         <div class="item-text">
                             <h4>Sessões de Fotos</h4>
                             <p>Retratos personalizados, moda, família e ensaios corporativos.</p>
                         </div>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item" data-aos="fade-left" data-aos-delay="400">
                         <i class="fas fa-video"></i>
                         <div class="item-text">
                             <h4>Videografia</h4>
                             <p>Criação de vídeos curtos para marketing, eventos e redes sociais.</p>
                         </div>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item" data-aos="fade-left" data-aos-delay="600">
                         <i class="fas fa-edit"></i>
                         <div class="item-text">
                             <h4>Edição Profissional</h4>
@@ -117,12 +122,12 @@
                 <p class="section-tag text-center" data-aos="fade-up">Portfólio</p>
                 <h2 class="text-center" data-aos="fade-up">Veja meu melhor portfólio</h2>
                 <div class="portfolio-grid" data-aos="fade-up">
-                    <div class="portfolio-item"><img src="images/FortalezaPhoto3.jpg" alt="Portfólio 1"></div>
-                    <div class="portfolio-item"><img src="images/FortalezaPhoto.jpg" alt="Portfólio 2"></div>
-                    <div class="portfolio-item"><img src="images/FortalezaPhoto2.jpg" alt="Portfólio 3"></div>
-                    <div class="portfolio-item"><img src="images/BookImage.jpg" alt="Portfólio 4"></div>
-                    <div class="portfolio-item"><img src="images/herocontent.jpg" alt="Portfólio 5"></div>
-                    <div class="portfolio-item"><img src="images/Gustavoprofile.png" alt="Portfólio 6"></div>
+                    <a href="images/FortalezaPhoto3.jpg" class="portfolio-item"><img src="images/FortalezaPhoto3.jpg" alt="Ensaio na cidade de Fortaleza" loading="lazy"></a>
+                    <a href="images/FortalezaPhoto.jpg" class="portfolio-item"><img src="images/FortalezaPhoto.jpg" alt="Ensaio urbano em avenida" loading="lazy"></a>
+                    <a href="images/FortalezaPhoto2.jpg" class="portfolio-item"><img src="images/FortalezaPhoto2.jpg" alt="Foto de rua com prédios" loading="lazy"></a>
+                    <a href="images/BookImage.jpg" class="portfolio-item"><img src="images/BookImage.jpg" alt="Book fotográfico profissional" loading="lazy"></a>
+                    <a href="images/herocontent.jpg" class="portfolio-item"><img src="images/herocontent.jpg" alt="Fotógrafo com equipamento" loading="lazy"></a>
+                    <a href="images/Gustavoprofile.png" class="portfolio-item"><img src="images/Gustavoprofile.png" alt="Retrato profissional de Gustavo Rocha" loading="lazy"></a>
                 </div>
             </div>
         </section>
@@ -135,14 +140,14 @@
                     <div class="testimonial-card" data-aos="fade-right">
                         <p class="quote">"O profissionalismo e a dedicação se destacam. Adorei o resultado final do meu ensaio e com certeza voltarei para mais."</p>
                         <div class="client-info">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" alt="Cliente 1">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" alt="Cliente 1" loading="lazy">
                             <p><strong>João C.</strong><br><span>Empresário</span></p>
                         </div>
                     </div>
                     <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
                         <p class="quote">"As fotos de casamento ficaram incríveis. Ele capturou cada emoção com um olhar único e sensível. Simplesmente perfeito."</p>
                         <div class="client-info">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Cliente 2">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Cliente 2" loading="lazy">
                             <p><strong>Ana P.</strong><br><span>Noiva</span></p>
                         </div>
                     </div>
@@ -209,11 +214,12 @@
                     </div>
                     <div class="footer-form">
                         <h3>Vamos conversar?</h3>
-                        <form action="#">
+                        <form id="contact-form">
                             <input type="text" placeholder="Seu Nome" required>
                             <input type="email" placeholder="Seu Email" required>
                             <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
                             <button type="submit" class="cta-button">Enviar Mensagem</button>
+                            <div id="form-feedback" class="form-feedback"></div>
                         </form>
                     </div>
                 </div>
@@ -223,6 +229,13 @@
             </div>
         </footer>
     </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Imagem do portfólio em tela cheia">
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="javascript/script.js"></script>

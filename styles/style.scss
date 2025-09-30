@@ -49,29 +49,35 @@ img { max-width: 100%; display: block; height: auto; }
 .cta-button {
     display: inline-block;
     background-color: $color-gold;
-    color: white;
+    color: white !important;
     padding: 12px 30px;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 2px solid $color-gold;
+    cursor: pointer;
 
     &.outlined {
         background-color: transparent;
-        color: $color-gold;
+        color: $color-gold !important;
         &:hover {
             background-color: $color-gold;
-            color: white;
+            color: white !important;
         }
     }
     &:hover { background-color: darken($color-gold, 10%); }
+    &:disabled {
+        background-color: #ccc;
+        border-color: #ccc;
+        cursor: not-allowed;
+    }
 }
 
 /* --- Tema Escuro --- */
 body.dark-theme {
     background-color: $color-bg-dark;
     color: $color-text-dark;
-    .main-header, .about-section, .portfolio-section, .pricing-section, .main-footer, .hero-section { // <--- AQUI ESTÁ A CORREÇÃO PRINCIPAL
+    .main-header, .about-section, .portfolio-section, .pricing-section, .main-footer, .hero-section {
         background-color: $color-surface-dark;
     }
     .services-section, .testimonials-section {
@@ -85,9 +91,6 @@ body.dark-theme {
     }
     .mobile-nav {
         background-color: rgba($color-surface-dark, 0.95);
-    }
-    .services-list {
-        background-color: $color-bg-dark; // Garante que a caixa de serviços no escuro seja escura
     }
     .testimonial-card, .pricing-card {
         background-color: $color-surface-dark;
@@ -105,6 +108,9 @@ body.dark-theme {
         background-color: $color-bg-dark;
         border-color: $color-border-dark;
         color: $color-text-dark;
+    }
+    .logo img {
+        filter: invert(1);
     }
 }
 
@@ -190,7 +196,7 @@ body.dark-theme {
 /* --- Seções Principais --- */
 .hero-section {
     padding-top: 120px;
-    background-color: $color-surface-light; /* Isso é para o tema CLARO */
+    background-color: $color-surface-light;
     .hero-container {
         display: flex;
         align-items: center;
@@ -264,7 +270,8 @@ body.dark-theme {
     background-color: $color-surface-light;
     .testimonials-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        // TÉCNICA DO WRAP AUTOMÁTICO PARA GRID
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 30px;
     }
     .testimonial-card {
@@ -284,7 +291,13 @@ body.dark-theme {
 
 .pricing-section {
     background-color: $color-bg-light;
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .pricing-grid {
+        display: grid;
+        // TÉCNICA DO WRAP AUTOMÁTICO PARA GRID
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        align-items: start; // Alinha os cards no topo
+    }
     .pricing-card {
         background-color: $color-surface-light;
         border: 1px solid $color-border-light;
@@ -298,8 +311,7 @@ body.dark-theme {
             color: $color-bg-light;
             border: none;
             transform: scale(1.05);
-            h4, .price { color: $color-gold; }
-            li { color: #ccc; }
+            &:hover { transform: scale(1.08) translateY(-10px); }
         }
         h4 { font-size: 1.3rem; }
         .price { font-size: 3rem; font-weight: 700; margin: 15px 0; }
@@ -350,8 +362,6 @@ body.dark-theme {
 @media (max-width: 1024px) {
     .main-header .main-nav { display: none; }
     .main-header .menu-toggle { display: block; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .pricing-card { max-width: 500px; margin: 0 auto 20px; &.featured { transform: scale(1); } }
 }
 
 @media (max-width: 768px) {
@@ -365,8 +375,10 @@ body.dark-theme {
     .about-image { order: -1; margin-bottom: 40px; }
     .services-image { margin-bottom: 40px; }
     .portfolio-grid { column-count: 2; }
-    .testimonials-grid { grid-template-columns: 1fr; }
     .footer-form button { width: 100%; }
+    .pricing-card.featured {
+        transform: scale(1); // Remove o scale no mobile para não ficar maior que os outros
+    }
 }
 
 @media (max-width: 480px) {

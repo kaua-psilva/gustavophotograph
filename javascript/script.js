@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setupMobileMenu();
         setupSmoothScrolling();
         setupActiveLinkOnScroll();
+        setupContactForm();
+        setupLightbox();
     };
 
     const setupAOS = () => {
@@ -46,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('no-scroll');
         });
     };
-
     const setupSmoothScrolling = () => {
         const allNavLinks = document.querySelectorAll('.nav-link, .logo, .cta-button, .read-more-button');
         const headerHeight = document.querySelector('.main-header').offsetHeight;
@@ -99,6 +100,91 @@ document.addEventListener('DOMContentLoaded', () => {
         }, observerOptions);
 
         sections.forEach(section => observer.observe(section));
+    };
+    const setupContactForm = () => {
+        const form = document.getElementById('contact-form');
+        const feedbackEl = document.getElementById('form-feedback');
+        if (!form || !feedbackEl) return;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            feedbackEl.classList.remove('show', 'success');
+
+            setTimeout(() => {
+                feedbackEl.textContent = 'Obrigado! Sua mensagem foi enviada com sucesso.';
+                feedbackEl.classList.add('show', 'success');
+                
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Mensagem';
+
+                setTimeout(() => {
+                    feedbackEl.classList.remove('show');
+                }, 5000);
+
+            }, 1500);
+        });
+    };
+    const setupLightbox = () => {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+
+        if (!lightbox) return;
+
+        let currentIndex = 0;
+        const images = Array.from(portfolioItems).map(item => item.href);
+
+        const showImage = (index) => {
+            lightboxImg.src = images[index];
+            currentIndex = index;
+        };
+
+        portfolioItems.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightbox.classList.add('active');
+                showImage(index);
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+        };
+
+        const showNext = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        };
+
+        const showPrev = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        lightboxNext.addEventListener('click', showNext);
+        lightboxPrev.addEventListener('click', showPrev);
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
     };
 
     init();
