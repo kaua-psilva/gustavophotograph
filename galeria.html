@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Gustavo Sousa Rocha</title>
+    <meta name="description" content="Explore a galeria de projetos de Gustavo Sousa Rocha, fotógrafo e videomaker.">
+    <link rel="shortcut icon" href="images/IMG_8036.PNG" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="dark-theme">
+
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img id="logoMark" src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha" width="90" height="90">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#sobre" class="nav-link">Sobre</a>
+                <a href="index.html#servicos" class="nav-link">Serviços</a>
+                <a href="galeria.html" class="nav-link active">Galeria</a>
+                <a href="index.html#contato" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-right">
+                <label class="theme-switch" for="theme-toggle-checkbox" title="Alterar tema">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <div class="hamburger"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="galeria.html" class="nav-link">Galeria</a>
+        <a href="index.html#contato" class="contact-button">Entre em contato</a>
+    </div>
+
+    <main>
+        <section class="gallery-page-section section-padded">
+            <div class="container">
+                <p class="section-tag text-center" data-aos="fade-up">Galeria</p>
+                <h1 class="text-center" data-aos="fade-up">Meus Projetos</h1>
+
+                <div class="gallery-filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ensaios">Ensaios</button>
+                    <button class="filter-btn" data-filter="videos">Vídeos</button>
+                    <button class="filter-btn" data-filter="eventos">Eventos</button>
+                </div>
+                <div class="full-portfolio-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item" data-category="ensaios"><img src="images/FortalezaPhoto3.webp" alt="Portfólio 1" loading="lazy"></div>
+                    <div class="portfolio-item" data-category="eventos"><img src="images/FortalezaPhoto.webp" alt="Portfólio 2" loading="lazy"></div>
+                    <div class="portfolio-item" data-category="ensaios"><img src="images/FortalezaPhoto2.webp" alt="Portfólio 3" loading="lazy"></div>
+                    
+                    <div class="portfolio-item" data-category="videos"><img src="images/BookImage.webp" alt="Portfólio 4" loading="lazy"></div>
+
+                    <div class="portfolio-item" data-category="eventos"><img src="images/herocontent.webp" alt="Portfólio 5" loading="lazy"></div>
+                    <div class="portfolio-item" data-category="ensaios"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800" alt="Portfólio 7" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#top" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+</body>
+</html>

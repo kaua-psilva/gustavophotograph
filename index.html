@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Sousa Rocha</title>
-    <meta name="description" content="Fotógrafo e videomaker em Chapada dos Guimarães. Especializado em retratos, eventos e ensaios autênticos. Transformo momentos em memórias inesquecíveis.">
+    <title>Gustavo Sousa Rocha | Fotografia</title>
+    <meta name="description" content="Estúdio de fotografia e vídeo focado em transformar suas ideias em imagens inesquecíveis.">
+    
+    <meta property="og:title" content="Gustavo Sousa Rocha | Fotografia">
+    <meta property="og:description" content="Transformando suas ideias em imagens inesquecíveis.">
+    <meta property="og:image" content="images/FortalezaPhoto.webp"> 
+    <meta property="og:url" content="https://seusite.com"> 
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="shortcut icon" href="images/IMG_8036.PNG" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="dark-theme no-scroll"> 
 
-    <header class="main-header">
+    <div class="preloader">
+        <img src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha" class="preloader-logo">
+    </div>
+
+    <header class="main-header" id="main-header">
         <div class="container">
-            <a href="#inicio" class="logo">
-                <img id="logoMark" src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha">
+            <a href="index.html" class="logo">
+                <img id="logoMark" src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha" width="90" height="90">
             </a>
             <nav class="main-nav">
                 <a href="#inicio" class="nav-link active">Início</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="galeria.html" class="nav-link">Galeria</a>
                 <a href="#contato" class="nav-link">Contato</a>
             </nav>
             <div class="header-right">
                 <label class="theme-switch" for="theme-toggle-checkbox" title="Alterar tema">
                     <input type="checkbox" id="theme-toggle-checkbox">
-                    <span class="slider round">
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-moon"></i>
-                    </span>
+                    <span class="slider round"></span>
                 </label>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                     <div class="hamburger"></div>
                 </button>
             </div>
@@ -45,49 +53,49 @@
         <a href="#inicio" class="nav-link">Início</a>
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#servicos" class="nav-link">Serviços</a>
-        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="galeria.html" class="nav-link">Galeria</a>
         <a href="#contato" class="contact-button">Entre em contato</a>
     </div>
 
     <main>
-        <section id="inicio" class="hero-section">
+        <section id="inicio" class="hero-section section-observer">
             <div class="container hero-container">
-                <div class="hero-text">
-                    <p class="intro-text" data-aos="fade-up">Olá, eu sou</p>
-                    <h1 data-aos="fade-up" data-aos-delay="200">Gustavo Sousa Rocha</h1>
-                    <p class="role" data-aos="fade-up" data-aos-delay="400">Fotógrafo & Videomaker</p>
-                    <div class="social-icons" data-aos="fade-up" data-aos-delay="600">
+                <div class="hero-text" data-aos="fade-right">
+                    <p class="intro-text">Olá, eu sou</p>
+                    <h1>Gustavo Sousa Rocha</h1>
+                    <p class="role">Fotógrafo & Videomaker</p>
+                    <div class="social-icons">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-delay="800">
-                    <img src="images/FortalezaPhoto2.jpg" alt="Foto de Gustavo Sousa Rocha" loading="lazy">
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="images/FortalezaPhoto2.webp" alt="Foto de Gustavo Sousa Rocha" width="570" height="600">
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about-section section-padded">
+        <section id="sobre" class="about-section section-padded section-observer">
             <div class="container about-container">
                 <div class="about-text" data-aos="fade-right">
                     <p class="section-tag">Sobre mim</p>
                     <h2>Quer saber mais sobre mim?</h2>
-                    <p>Sou um fotógrafo apaixonado pela arte de capturar emoções e momentos únicos. Minha jornada começou com uma câmera na mão e a curiosidade de transformar o comum em extraordinário. Desde então, venho aprimorando meu olhar para entregar trabalhos que contam histórias autênticas e inspiram.</p>
+                    <p>Sou um fotógrafo apaixonado pela arte de capturar emoções e momentos únicos. Minha jornada começou com uma câmera na mão e a curiosidade de transformar o comum em extraordinário.</p>
                     <a href="#contato" class="cta-button">Fale Comigo</a>
                 </div>
                 <div class="about-image" data-aos="fade-left" data-aos-delay="200">
                     <div class="image-accent"></div>
-                    <img src="images/FotoProfissaGustavo.jpg" alt="Retrato de Gustavo Sousa Rocha" loading="lazy">
+                    <img src="images/FotoProfissaGustavo.webp" alt="Retrato de Gustavo Sousa Rocha" loading="lazy" width="400" height="400">
                 </div>
             </div>
         </section>
 
-        <section id="servicos" class="services-section section-padded">
+        <section id="servicos" class="services-section section-padded section-observer">
             <div class="container services-container">
                 <div class="services-image" data-aos="fade-right">
-                    <img src="images/herocontent.jpg" alt="Fotógrafo em ação" loading="lazy">
+                    <img src="images/herocontent.webp" alt="Fotógrafo em ação" loading="lazy" width="570" height="570">
                 </div>
                 <div class="services-list" data-aos="fade-left">
                     <p class="section-tag">Serviços</p>
@@ -117,92 +125,66 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio-section section-padded">
+        <section id="mini-galeria" class="mini-gallery-section section-padded">
             <div class="container">
                 <p class="section-tag text-center" data-aos="fade-up">Portfólio</p>
-                <h2 class="text-center" data-aos="fade-up">Veja meu melhor portfólio</h2>
-                <div class="portfolio-grid" data-aos="fade-up">
-                    <a href="images/FortalezaPhoto3.jpg" class="portfolio-item"><img src="images/FortalezaPhoto3.jpg" alt="Ensaio na cidade de Fortaleza" loading="lazy"></a>
-                    <a href="images/FortalezaPhoto.jpg" class="portfolio-item"><img src="images/FortalezaPhoto.jpg" alt="Ensaio urbano em avenida" loading="lazy"></a>
-                    <a href="images/FortalezaPhoto2.jpg" class="portfolio-item"><img src="images/FortalezaPhoto2.jpg" alt="Foto de rua com prédios" loading="lazy"></a>
-                    <a href="images/BookImage.jpg" class="portfolio-item"><img src="images/BookImage.jpg" alt="Book fotográfico profissional" loading="lazy"></a>
-                    <a href="images/herocontent.jpg" class="portfolio-item"><img src="images/herocontent.jpg" alt="Fotógrafo com equipamento" loading="lazy"></a>
-                    <a href="images/Gustavoprofile.png" class="portfolio-item"><img src="images/Gustavoprofile.png" alt="Retrato profissional de Gustavo Rocha" loading="lazy"></a>
+                <h2 class="text-center" data-aos="fade-up">Um Pouco do Meu Olhar</h2>
+                <div class="portfolio-preview-grid" data-aos="fade-up" data-aos-delay="200">
+                    <a href="galeria.html" class="preview-item"><img src="images/BookImage.webp" alt="Amostra do portfólio 1" loading="lazy"></a>
+                    <a href="galeria.html" class="preview-item"><img src="images/FortalezaPhoto3.webp" alt="Amostra do portfólio 2" loading="lazy"></a>
                 </div>
             </div>
         </section>
 
+        <section id="portfolio" class="portfolio-section section-padded">
+            <div class="container">
+                <div class="gallery-cta" data-aos="fade-up" style="background-image: url('images/FortalezaPhoto.webp');">
+                    <a href="galeria.html" class="cta-button outlined">
+                        Ver galeria completa <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
         <section id="depoimentos" class="testimonials-section section-padded">
-            <div class="container">
-                <p class="section-tag text-center" data-aos="fade-up">Depoimentos</p>
-                <h2 class="text-center" data-aos="fade-up">O que os clientes dizem sobre mim?</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card" data-aos="fade-right">
-                        <p class="quote">"O profissionalismo e a dedicação se destacam. Adorei o resultado final do meu ensaio e com certeza voltarei para mais."</p>
-                        <div class="client-info">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" alt="Cliente 1" loading="lazy">
-                            <p><strong>João C.</strong><br><span>Empresário</span></p>
+            <div class="container" data-aos="fade-up">
+                <p class="section-tag text-center">Depoimentos</p>
+                <h2 class="text-center">O que os Clientes Dizem</h2>
+                <div class="swiper testimonial-slider" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Maria Silva">
+                                <blockquote>"O Gustavo tem um talento incrível para capturar a essência do momento. As fotos do nosso casamento ficaram simplesmente perfeitas, superou todas as expectativas!"</blockquote>
+                                <cite>Maria Silva</cite>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de João Pereira">
+                                <blockquote>"Profissionalismo impecável do início ao fim. As fotos corporativas que ele fez para a minha empresa elevaram a nossa imagem de marca. Recomendo fortemente."</blockquote>
+                                <cite>João Pereira</cite>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                             <div class="testimonial-card">
+                                <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Foto de Ana Costa">
+                                <blockquote>"Amei o ensaio de família! O Gustavo nos deixou super à vontade e o resultado foram fotos naturais e cheias de emoção. Um trabalho memorável."</blockquote>
+                                <cite>Ana Costa</cite>
+                            </div>
                         </div>
                     </div>
-                    <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
-                        <p class="quote">"As fotos de casamento ficaram incríveis. Ele capturou cada emoção com um olhar único e sensível. Simplesmente perfeito."</p>
-                        <div class="client-info">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Cliente 2" loading="lazy">
-                            <p><strong>Ana P.</strong><br><span>Noiva</span></p>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
 
-        <section id="precos" class="pricing-section section-padded">
-            <div class="container">
-                <p class="section-tag text-center" data-aos="fade-up">Preços</p>
-                <h2 class="text-center" data-aos="fade-up">Pacotes de Serviços</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card" data-aos="fade-up">
-                        <h4>Pacote Pessoal</h4>
-                        <p class="price">$100</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 1 hora de sessão</li>
-                            <li><i class="fas fa-check"></i> 10 fotos editadas</li>
-                            <li><i class="fas fa-check"></i> 1 locação</li>
-                            <li><i class="fas fa-check"></i> 1 troca de roupa</li>
-                        </ul>
-                        <a href="#contato" class="cta-button outlined">Obter Pacote</a>
-                    </div>
-                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-                        <h4>Pacote Profissional</h4>
-                        <p class="price">$250</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 2 horas de sessão</li>
-                            <li><i class="fas fa-check"></i> 30 fotos editadas</li>
-                            <li><i class="fas fa-check"></i> 2 locações</li>
-                            <li><i class="fas fa-check"></i> 2 trocas de roupa</li>
-                        </ul>
-                        <a href="#contato" class="cta-button">Obter Pacote</a>
-                    </div>
-                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
-                        <h4>Pacote Corporativo</h4>
-                        <p class="price">$500</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 4 horas de sessão</li>
-                            <li><i class="fas fa-check"></i> 50 fotos editadas</li>
-                            <li><i class="fas fa-check"></i> Locações ilimitadas</li>
-                            <li><i class="fas fa-check"></i> Foco em marketing</li>
-                        </ul>
-                        <a href="#contato" class="cta-button outlined">Obter Pacote</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer id="contato" class="main-footer section-padded">
-            <div class="container">
+        <footer id="contato" class="main-footer section-padded section-observer">
+           <div class="container">
                 <div class="footer-content">
                     <div class="footer-info">
-                        <a href="#inicio" class="logo">
-                            <img id="logoMark" src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha">
+                        <a href="#inicio" class="logo" aria-label="Voltar para o topo da página">
+                            <img id="logoMark" src="images/IMG_8036.PNG" alt="Logo de Gustavo Sousa Rocha" width="90" height="90">
                         </a>
                         <p>Capturando momentos, criando memórias. Vamos criar algo incrível juntos.</p>
                         <div class="social-icons">
@@ -215,9 +197,18 @@
                     <div class="footer-form">
                         <h3>Vamos conversar?</h3>
                         <form id="contact-form">
-                            <input type="text" placeholder="Seu Nome" required>
-                            <input type="email" placeholder="Seu Email" required>
-                            <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
+                            <div class="form-group">
+                                <label for="userName" class="sr-only">Seu Nome</label>
+                                <input type="text" id="userName" placeholder="Seu Nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail" class="sr-only">Seu Email</label>
+                                <input type="email" id="userEmail" placeholder="Seu Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userMessage" class="sr-only">Sua Mensagem</label>
+                                <textarea id="userMessage" placeholder="Sua Mensagem" rows="4" required></textarea>
+                            </div>
                             <button type="submit" class="cta-button">Enviar Mensagem</button>
                             <div id="form-feedback" class="form-feedback"></div>
                         </form>
@@ -229,15 +220,13 @@
             </div>
         </footer>
     </main>
-
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Imagem do portfólio em tela cheia">
-        <a class="lightbox-prev">&#10094;</a>
-        <a class="lightbox-next">&#10095;</a>
-    </div>
     
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="javascript/script.js"></script>
+    <a href="#inicio" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="javascript/script.js" defer></script>
 </body>
 </html>
